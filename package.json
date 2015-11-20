@@ -1,0 +1,57 @@
+{
+	"name": "happ",
+	"version": "0.0.1",
+	"description": "Hotel management panel",
+	"homepage": "http://blog.megam.co",
+	"author": {
+		"name": "RajThilak",
+		"email": "rajthilak@megam.io"
+	},
+	"contributors": [
+		{
+			"name": "Kishorekumar Neelamegam",
+			"email": "nkishore@megam.io",
+			"url": "http://www.megam.io"
+		}
+	],
+
+	"bugs": {
+		"url": "https://github.com/megamsys/hotel_app/issues"
+	},
+	"license": {
+		"type": "APACHEV2",
+		"url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/megamsys/hotel_app.git"
+	},
+
+	"main": "./index.html",
+
+	"bin": {
+		"tap": "happ.js"
+	},
+	"dependencies": {
+		"mime": "~1.3.4",
+		"express": "~4.13.3",
+		"util": "~0.10.3",
+		"js-yaml": "~3.4.3",
+		"yaml-config": "~0.3.0",
+		"log": "~1.4.0",
+		"uglify-js": "~2.6.1",
+		"react": "0.14.3",
+		"babel-core": "6.2.0",
+		"browserify": "12.0.1",
+		"node-jsx": "0.13.3",
+		"ejs": "2.3.4",
+		"react-dom": "0.14.3",
+		"react-chartjs":"0.6.0"
+	},	
+	"browserify": {
+    "transform": [
+      "reactify"
+    ]
+  },
+	"engine": "~0.10.0"
+}
