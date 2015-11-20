@@ -1,4 +1,4 @@
-tap
+Meglytics_Hotel
 ===
 
 Hotel management analytics panel
@@ -26,11 +26,15 @@ We are glad to help if you have questions, or request for new features..
 
 # License
 
-
 |                      |                                          |
 |:---------------------|:-----------------------------------------|
-| **Author:**          | Rajthilak (<rajthilak@megam.co.in>)
-| **Copyright:**       | Copyright (c) 2012-2013 Megam Systems.
+| **Author:**          | Rajthilak (<rajthilak@megam.io>)
+|	    	       	       | Yeshwanth Kumar (<getyesh@megam.io>)
+|                      | Thomas alrin (<thomasalrin@megam.io>)
+|                      | RanjithaR (<ranjithar@megam.io>)  
+|                      | Arunkumar sekar (<arunkumar.sekar@megam.io>)  
+|		       	           | KishorekumarNeelamegam (<nkishore@megam.io>)
+| **Copyright:**       | Copyright (c) 2013-2015 Megam Systems.
 | **License:**         | Apache License, Version 2.0
 
 Licensed under the Apache License, Version 2.0 (the "License");
