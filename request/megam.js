@@ -47,16 +47,20 @@ var MEGAM = module.exports = {
 	},
 	
 	getPostData : function() {
-		return post_result;
+		post_result =  { code:"202", 
+		                 msg_type:"info", 
+		                 msg:"47e01364-7741-4572-a438-b5f2be34fdfb", 
+		                 more:"", 
+		                 json_claz:"Megam::Sparkjobs", 
+		                 links:"ttp://docs.megam.io\nSupport :http://support.megam.io"
+		                 }
+		return JSON.stringify(post_result);
 	},	
 		
 	post : function(flows) {	
 		var defer = when.defer();
 		var path = version + "/sparkjobs/content";
-		console.log("==========================");
-		console.log(flows);
-		console.log(path);
-		console.log(api_key);
+		
 		var hmac = generateHMAC(flows, path, api_key);
 		// An object of options to indicate where to post to
 		// Configure the request
@@ -75,7 +79,9 @@ var MEGAM = module.exports = {
 		};
 		// Start the request
 		 request(options, function(error, response, body) {			
-				post_result = body;			
+				post_result = body;	
+				console.log("---------------------");
+				console.log(body);		
 				defer.resolve(); 			
 		});
 		return defer.promise;

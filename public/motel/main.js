@@ -96,6 +96,10 @@ var MOTEL = function() {
 			console.log(obj);
 			deploy(obj);
 		})
+		
+		$("#analysis").click(function() {
+			analysis();
+		})
 	}
 
 	$(function() {
