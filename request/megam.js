@@ -53,6 +53,10 @@ var MEGAM = module.exports = {
 	post : function(flows) {	
 		var defer = when.defer();
 		var path = version + "/sparkjobs/content";
+		console.log("==========================");
+		console.log(flows);
+		console.log(path);
+		console.log(api_key);
 		var hmac = generateHMAC(flows, path, api_key);
 		// An object of options to indicate where to post to
 		// Configure the request
@@ -63,7 +67,7 @@ var MEGAM = module.exports = {
 				'X-Megam-DATE' : now.toString(),
 				'X-Megam-EMAIL' : email,
 				'X-Megam-APIKEY' : api_key,
-				'X_Megam_HMAC' : email +":"+ hmac,
+				'X-Megam-HMAC' : email +":"+ hmac,
 				'Accept' : 'application/vnd.megam+json',
 				'Content-Type' : 'application/json'
 			},
@@ -71,8 +75,7 @@ var MEGAM = module.exports = {
 		};
 		// Start the request
 		 request(options, function(error, response, body) {			
-				post_result = body;
-				console.log(response);
+				post_result = body;			
 				defer.resolve(); 			
 		});
 		return defer.promise;
@@ -93,7 +96,7 @@ function calculateMD5(data) {
 }
 
 function generateHMAC(flows, path, apikey) {
-	var algorithm = 'HmacSHA1';
+	var algorithm = 'sha1';
 	var hash, hmac;
 	hmac = crypto.createHmac(algorithm, apikey).update(createSign(flows, path)).digest("hex");
 	console.log(hmac);
