@@ -14,9 +14,15 @@
  ** limitations under the License.
  */
 
-var fs = require('fs'), net = require('net'), util = require('util'), url = require('url'), http = require('http'), path = require('path'), mime = require('mime');
+var fs = require('fs'); 
+var net = require('net'); 
+var util = require('util'); 
+var url = require('url'); 
+var http = require('http');
+var path = require('path'); 
+var mime = require('mime');
 
-var yaml = require('./lib/happ_config.js');
+var yaml = require('./lib/config.js');
 
 // Make sure to include the JSX transpiler
 require('node-jsx').install();
@@ -29,19 +35,20 @@ var express = require('express');
 var app = express();
 var server = http.createServer(app)
 
-server.listen(yaml.config.server.port);
-console.log("Hotel app Server:" + yaml.version + " listening on port =" + yaml.config.server.port);
+var port = yaml.config.server.port || 2015
 
-app.use(express.static(__dirname + '/assets'));
-app.use(express.static(__dirname + '/app/components'));
-app.use(express.static(__dirname + '/app'));
+server.listen(port);
+util.log("> App server : " + yaml.version + " listening on port =" + port);
 
+util.log("> Server started...");
 // Set up Routes for the application
-require('./app/routes/core-routes.js')(app);
+require('./lib/routes.js')(app);
 
 // Set view path
-app.set('views', path.join(__dirname, 'views'));
+app.use("/",express.static(__dirname + '/../public'));
 // set up ejs for templating. You can use whatever
-app.set('view engine', 'ejs');
+//app.set('view engine', 'ejs');
+
+
 
 

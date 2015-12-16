@@ -1,40 +1,44 @@
-Meglytics_Hotel
-===
+# varai
 
-Hotel management analytics panel
+http://www.gomegam.com
 
-### Configuring `app.yaml`
+A visual tool for wiring the cloud platform comprising of apps/services.
+Credit goes to http://nodered.org from which this has been built.
 
-The default contents of `app.yaml` is as follows:
+## Quick Start
 
-```
-default:
-  server:
-    port: 7000
-    host: '127.0.0.1' 
-test:
+1. git clone https://github.com/megamsys/varai.git
+2. cd varai
+3. npm install
+4. node varai.js
+5. Open <http://localhost:1880>
 
-production:
-  server:
-    port: 8000
-    host: '127.0.0.1' 
-```
+
+## Browser Support
+
+The varai editor runs in the browser. We routinely develop and test using
+Chrome and Firefox. We have anecdotal evidence that it works in IE9.
+
+
+## Documentation
+
+Refer [documentation] (http://www.gomegam.com/docs)
+
 
 We are glad to help if you have questions, or request for new features..
 
-[twitter](http://twitter.com/indykish) [email](<rajthilak@megam.co.in>)
+[twitter @megamsys](http://twitter.com/megamsys) [email support@megam.co.in](<support@megam.co.in>)
+
+
 
 # License
 
+
 |                      |                                          |
 |:---------------------|:-----------------------------------------|
-| **Author:**          | Rajthilak (<rajthilak@megam.io>)
-|	    	       	       | Yeshwanth Kumar (<getyesh@megam.io>)
-|                      | Thomas alrin (<thomasalrin@megam.io>)
-|                      | RanjithaR (<ranjithar@megam.io>)  
-|                      | Arunkumar sekar (<arunkumar.sekar@megam.io>)  
-|		       	           | KishorekumarNeelamegam (<nkishore@megam.io>)
-| **Copyright:**       | Copyright (c) 2013-2015 Megam Systems.
+| **Author:**          | Rajthilak (<rajthilak@megam.co.in>)
+|		       | KishorekumarNeelamegam (<nkishore@megam.co.in>)
+| **Copyright:**       | Copyright (c) 2012-2014 Megam Systems.
 | **License:**         | Apache License, Version 2.0
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -48,5 +52,3 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
-
-

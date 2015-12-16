@@ -1,0 +1,119 @@
+.nav-tabs > li > a {
+    font-size: 15px ! important;
+    color: #000000;
+}
+
+.nav-tabs > li.active > a {
+    color: #00ba8b; !important
+    border-bottom-color: #00ba8b ! important;
+    background-color: #F9F6F1 ! important;
+}
+
+.nav-tabs > li.active > a:hover {
+    color: #00ba8b; !important
+}
+
+.togglable {
+    color: #D78770;
+    cursor: pointer;
+}
+
+.togglable-down::after, .togglable-up::after {
+    font-size: 8px;
+    margin-left: 0.5em;
+}
+
+.togglable-down::after {
+    content: "▼";
+    display: inline-block;
+}
+
+.togglable-up::after {
+    content: "▶";
+    display: inline-block;
+}
+
+.text-center {
+    text-align: center;
+    vertical-align: middle;
+    line-height: 50px;
+    color: #00ba8b; !important
+}
+
+.text-center p {
+    font-size: 40px;
+    color: #00ba8b; !important
+}
+
+.widgetheader {
+    text-align: center;
+    color: #FFF;
+    background-color: #686868;important!
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+/*-- Plan Features --*/
+
+.widgetcontents {
+    border: 1px solid #DDD;
+    height: 250px;
+}
+
+.widgetcontents {
+    padding-bottom: 1em;
+}
+
+.widgetcontents ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.widgetcontents li {
+    padding: 1em 0;
+    font-size: 18px;
+    border-bottom: 1px dotted #CCC;
+}
+
+.widhover li:hover {
+    background-color: #00BA8B;
+    color: #FFF;
+    cursor: pointer;
+}
+
+#obj_text {
+    font-size: 18px;
+    text-align: center;
+}
+
+.right {
+    position: absolute;
+    right: 20px;
+    margin-top: 5px;
+}
+
+
+input[type=checkbox]:not(old),
+input[type=radio   ]:not(old){
+  width   : 28px;
+  margin  : 0;
+  padding : 0;
+  opacity : 0;
+}
+
+input[type=checkbox]:not(old) + label,
+input[type=radio   ]:not(old) + label{
+  display      : inline-block;
+  margin-left  : -28px;
+  padding-left : 28px;
+  background   : url('../img/checks.png') no-repeat 0 0;
+  line-height  : 24px;
+}
+
+input[type=checkbox]:not(old):checked + label{
+  background-position : 0 -24px;
+}
+
+input[type=radio]:not(old):checked + label{
+  background-position : 0 -48px;
+}
