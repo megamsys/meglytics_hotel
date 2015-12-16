@@ -51,7 +51,8 @@
 		"when":"3.7.5",
 		"request":"2.67.0",
 		"time":"0.11.4",
-		"aws-sdk":"2.2.19"		
+		"aws-sdk":"2.2.19",
+		"json-mapper":"0.0.9"		
 	},	
 	"browserify": {
     "transform": [

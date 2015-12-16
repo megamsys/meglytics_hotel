@@ -16,6 +16,24 @@
 
 var MOTEL = function() {
 	
+	function analysis() {
+		var id = $("#jobid").val();
+		$.ajax({
+			url : "/analysis/" + id,
+			dataType : 'json',
+			type : 'GET',
+			cache : false,
+			success : function(data) {
+				console.log("=========================");
+				console.log(data.result);
+				//charts(data.result);
+			},
+			error : function(xhr, status, err) {
+				console.error(err.toString());
+			}
+		});
+	}
+	
 	function deploy(obj) {
 		$.ajax({
 			url : "/deploy/" + obj,
@@ -23,7 +41,9 @@ var MOTEL = function() {
 			type : 'GET',
 			cache : false,
 			success : function(data) {
-				console.log(data);
+				console.log(data.msg);
+				$("#jobid").val(data.msg);
+				analysis();
 			},
 			error : function(xhr, status, err) {
 				console.error(err.toString());
@@ -84,8 +104,8 @@ var MOTEL = function() {
 			$('#radio_'+this.id).prop('checked', true);
 		})
 		
-	}
-
+	}	
+	
 	function loadUIActions() {
 		//toastr.info('Are you the 6 fingered man?')
 		
@@ -97,9 +117,10 @@ var MOTEL = function() {
 			deploy(obj);
 		})
 		
-		$("#analysis").click(function() {
-			analysis();
-		})
+		//$("#analysis").click(function() {
+		//	analysis();
+		//})		
+		
 	}
 
 	$(function() {
